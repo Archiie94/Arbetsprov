@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM - Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Start Content -->
+    <div id="content">
+
+        <!-- Start Logo -->
+        <div id="logo-wrapper">
+            <img id="logo" src="../UI/assets/logo.svg" alt="SearQ logo">
+        </div>
+        <!-- END: Logo -->
+
+        <!-- Start Search bar -->
+        <div id="search">
+            <div id="search-wrapper">
+
+                <!-- Start Preloader -->
+                <div id="search-loader">
+                    Loading...
+                </div>
+                <!-- END: Preloader -->
+
+                <!-- Start Search input and label -->
+                <label for="search-bar">
+                    <img src="../UI/assets/search.svg" alt="Search Icon">
+                </label>
+                <input type="text" onkeyup="searchChange(event)" name="search-bar" placeholder="Search for something..." id="search-bar" />
+                <!-- END: Search input and label -->
+
+            </div>
+        </div>
+        <!-- END: Search bar -->
+    
+        <!-- Start Word List -->
+        <div id="word-list"></div>
+        <!-- END: Word List -->
+
+    </div>
+    <!-- END: Content -->
+
+    <!-- Start Previous searches -->
+    <ul id="previous-searches"></ul>
+    <!-- END: Previous searches -->
+
+    <!-- JavaScript Includes -->
+    <script src="functions.js"></script>
+
+</body>
+</html>

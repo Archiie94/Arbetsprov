@@ -1,0 +1,177 @@
+/* Fonts and imports */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.clearfix {clear: both;}
+.middle {vertical-align: middle}
+
+/* General */
+body {
+    margin: 0px;
+    /* Fallback */
+    background: #002751;
+    background: linear-gradient(#002751, #3b57a7);
+    height: calc(100vh - 280px);
+    font-family: 'Roboto', sans-serif;
+    padding: 140px 0;
+}
+
+/* Logo item */
+#logo-wrapper {
+    text-align: center;
+}
+#logo {
+    margin-bottom: 80px;   
+    height: 50px;
+}
+
+
+/* Content item */
+#content {
+    /* Sets up the responsive part. */
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Search icon */
+#search {
+    text-align: center;
+}
+#search-wrapper {
+    position: relative;
+}
+#search-wrapper label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+#search-wrapper label img {
+    width: 23px;
+    height: 23px;
+}
+#search-loader {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    line-height: 55px;
+    color: #FFF;
+    background: rgba(0,0,0,.4);
+}
+#search-bar {
+    border-radius: 5px;
+    border: 0px;
+    background: #8092a7;
+    line-height: 55px;
+    padding-left: 50px;
+    width: calc(100% - 50px);
+    color: #FFF;
+    font-size: 18px;
+}
+#search-bar::placeholder {
+    color: #b7c2cd;
+}
+
+/* Word list */
+#word-list .item {
+    background: rgba(255,255,255, .1);
+    color: #FFF;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+}
+#word-list .item:hover {
+    opacity: .8;
+    transition: .2s ease-in;
+}
+
+
+/* Previous searches */
+#previous-searches {
+    max-width: 80%;
+    display: none;
+    background: #1f4069;
+    background: linear-gradient(#1f4069, #3c5894);
+    list-style: none;
+    color: #FFF;
+    padding: 20px 0;
+    margin: 30px auto;
+}
+#previous-searches li {
+    line-height: 50px;
+    position: relative;
+}
+#previous-searches li:hover {
+    cursor: pointer;
+    transition: .1s ease-in;
+    background: rgba(255,255,255, .1);
+}
+#previous-searches li:focus .action,
+#previous-searches li:hover .action {
+    display: block;
+}
+.date,
+.action,
+.word {
+    vertical-align: middle;
+    float: left;
+}
+.word {
+    padding: 0 30px;
+    width: calc(100% - 450px);
+}
+.date {
+    font-size: 15px;
+    width: 120px;
+}
+.action {
+    float: right;
+    display: none;
+    width: 50px;
+    position: absolute;
+    height: 100%;
+    right:0;
+    background: #7a3a55;
+    text-align: center;
+}
+
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 860px) {
+    #previous-searches {
+        max-width: 100%;
+    }
+    #previous-serches li {
+        height: 50px;
+    }
+    .word {
+        padding: 0 10px;
+        width: 300px;
+        font-size: 16px;
+        line-height:16px;
+        padding: 17px 10px;
+    }
+    .date {
+        font-size: 12px;
+        padding: 17px 0;
+        line-height: 16px;
+        width: 80px;
+    }
+
+    #logo {
+        margin-bottom: 30px;
+    }
+    body {
+        height: calc(100vh - 200px);
+        padding: 100px 0;
+    }
+}
+/* Phones */
+@media (max-width: 640px) {
+
+    .word {
+        width: 150px;
+    }
+
+}
